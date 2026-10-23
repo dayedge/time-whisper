@@ -1,0 +1,66 @@
+name: Prepare library release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Semantic version without v (initial: 0.7.0)'
+        required: true
+        default: '0.7.0'
+      source_ref:
+        description: 'Source commit qualified locally'
+        required: true
+        default: main
+      qualification_sha256:
+        description: 'SHA256 of qualification.json uploaded to the draft release'
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: library-release-${{ inputs.version }}
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: macos-15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ inputs.version }}
+      QUALIFICATION_SHA256: ${{ inputs.qualification_sha256 }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.source_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Verify draft and local qualification
+        run: |
+          python3 -c 'import os; from scripts.release import version; version(os.environ["VERSION"])'
+          test "$(gh release view "$VERSION" --json isDraft --jq .isDraft)" = true
+          git ls-remote --tags origin "refs/tags/$VERSION" > build-release-tag.txt
+          test ! -s build-release-tag.txt
+          rm build-release-tag.txt
+          mkdir -p build/release
+          gh release download "$VERSION" --pattern qualification.json --dir build/release
+          python3 scripts/release.py verify --version "$VERSION" --report build/release/qualification.json --sha256 "$QUALIFICATION_SHA256"
+      - name: Test and package
+        run: |
+          make test swift-test package
+          python3 scripts/test_release.py
+          python3 scripts/smoke_package.py build/distributions/package
+          python3 scripts/package.py --version "$VERSION" --release
+          swift package --package-path build/distributions/package dump-package > /dev/null
+      - name: Prepare release tag and draft assets
+        run: |
+          test "$(gh release view "$VERSION" --json isDraft --jq .isDraft)" = true
+          gh release upload "$VERSION" "build/distributions/TimeWhisperCore-$VERSION.xcframework.zip" "build/distributions/TimeWhisperCore-$VERSION.xcframework.zip.sha256" --clobber
+          cp build/distributions/package/Package.swift Package.swift
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Package.swift
+          git commit -m "Release TimeWhisper $VERSION"
+          git tag "$VERSION"
+          git push origin "refs/tags/$VERSION"
+          gh release edit "$VERSION" --target "$(git rev-parse HEAD)"
+          echo 'Draft prepared. Review it, then publish explicitly with gh release edit --draft=false.'

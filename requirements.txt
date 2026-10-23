@@ -1,0 +1,7 @@
+# Python dependencies for training, local inference and Core ML export/checks.
+# The Swift/Kotlin library and the packaging scripts do not require these packages.
+torch
+transformers
+tokenizers
+numpy
+coremltools

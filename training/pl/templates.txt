@@ -1,0 +1,2 @@
+# Training templates: sentences with {slots}, filled from pools.json. Grouped like sentences.txt.
+# Format and labels: training/prompts/labels.md. Add lines with `make add-sentences FILE=<file>`; a line with a slot is a template.

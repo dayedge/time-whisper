@@ -1,0 +1,390 @@
+{
+  "vp": {
+    "label": "T", "intent": "task",
+    "items": [
+      "send the slides to Priya", "renew the domain for the shop site", "file the expense report", "update the onboarding doc",
+      "review Tomasz's pull request", "reply to the vendor about pricing", "draft the hiring plan", "sign the NDA from Northwind",
+      "export the survey results", "archive the old Jira tickets", "fix the flaky login test", "chase the unpaid invoice from Brightline",
+      "approve Leo's holiday request", "prepare talking points for the board", "write up the incident report", "rotate the API keys",
+      "back up the design files", "book a meeting room for the offsite", "order new business cards", "submit the timesheet",
+      "clean up the shared drive", "translate the FAQ into German", "renew the SSL certificate", "set the out-of-office reply",
+      "print the contracts for signing", "change the water filter", "take out the recycling", "descale the kettle",
+      "defrost the freezer", "replace the smoke alarm battery", "fix the squeaky hinge on the back door", "mow the lawn",
+      "water the balcony plants", "hang the new shelves", "bleed the radiators", "order a new vacuum filter", "clean the gutters",
+      "call the plumber about the leak", "book a chimney sweep", "return the drill to Hamid", "repot the monstera", "wash the car",
+      "flip the mattress", "fix the bike tyre", "pay the electricity bill", "transfer the deposit to Marek",
+      "cancel the gym membership", "dispute the double charge on the card", "move savings into the ISA",
+      "check the credit card statement", "top up the transit card", "file the tax return", "split the dinner bill with Ola",
+      "set up the direct debit for council tax", "claim back the train fare", "pay the window cleaner", "renew the car insurance",
+      "compare broadband deals", "refill my inhaler prescription", "book a blood test", "call the vet about Biscuit's vaccine",
+      "pick up contact lenses", "order more vitamin D", "book a physio appointment", "get a flu jab",
+      "send the referral letter to the clinic", "buy sunscreen for the kids", "buy a birthday card for Gran", "wrap Zoe's present",
+      "sign the permission slip", "pack the kids' swim bags", "text Olu about the weekend", "call grandma",
+      "email the landlord about the boiler", "RSVP to Kasia's wedding", "print the boarding passes", "get the car washed",
+      "book the car service", "pick up the dry cleaning", "drop off the parcel at the post office", "learn the chords for the wedding song",
+      "practise Spanish on Duolingo", "submit the scholarship essay", "buy a new school uniform for Mia", "sort out the photo album",
+      "book swimming lessons for Zoe", "send a thank-you note to the Nowaks", "order flowers for Mum", "return the jacket to Zara",
+      "cancel the Netflix trial", "update my CV", "apply for the parking permit", "renew the fishing licence",
+      "check in for the flight to Lisbon", "exchange some euros", "buy travel insurance", "book the airport transfer",
+      "download offline maps for Kyoto", "confirm the Airbnb in Porto", "get a visa photo taken", "pack the hiking gear",
+      "book a dog sitter for the trip", "defrost the chicken", "feed the neighbours' cat", "collect the parcel from the locker",
+      "ring the council about the bins", "sell the old sofa on Marketplace", "fill in the census form", "back up the laptop",
+      "buy a gift for Ola", "set up the new router", "book tickets for the panto", "find a babysitter", "prepare the quarterly forecast", "prepare a toast for Ola's wedding", "plan the team offsite agenda", "plan Mia's birthday party", "arrange the furniture delivery", "organise the garage", "organise the receipts for the accountant", "set up the new printer", "set up Gran's new phone", "sort out the car tax", "sort out the spare room", "get the boiler serviced", "get new tyres fitted", "make a dentist appointment for Leo", "make a packing list for the trip", "add Ola to the shared calendar", "put up the shelves in the hall", "put the bins out", "block the spam caller", "remind Ola about the rent", "check in for the flight", "confirm the caterer numbers", "note down the meter readings", "add the receipts to the expense sheet", "put the deposit down on the flat", "set a budget for the holiday", "schedule the boiler service", "book the kids' flu jabs", "ask Daria about the promotion", "tell the team about the reorg", "let the landlord know about the leak", "remember Kemal's leaving card"
+    ],
+    "traps": [
+      "read Tuesdays with Morrie", "watch Twelve Angry Men", "invite Jan to the barbecue", "call April about the lease",
+      "text June about carpooling", "email May Chen about the contract", "pay Jan back for the festival tickets",
+      "call Mo about the van", "order 3 bags of mulch", "print 40 copies of the flyer", "review section 4.2 of the contract",
+      "reread pages 10-25 of the brief", "call the 24/7 helpline about the card", "fix bug 1043", "bake 2 dozen cookies",
+      "book a table for 6", "learn the intro to Seven Nation Army", "update the weekly newsletter",
+      "send the monthly report to Brightline", "cancel the yearly Adobe plan", "write the 2nd draft of the speech",
+      "order the 3-4 person tent", "fix the 2:1 aspect ratio bug", "buy a 1st birthday cake for Zoe",
+      "read chapter 9 of Atomic Habits", "order the 2-pack of HEPA filters", "fix the printer on floor 3", "text Sunday about the rota", "reply to the urgent email from Priya", "file the important documents from the bank", "read the critical review of the launch"
+    ]
+  },
+  "vp_ing": {
+    "label": "T", "intent": "task",
+    "items": [
+      "renewing the car insurance", "calling the plumber", "booking flights to Porto", "paying the council tax",
+      "clearing out the garage", "sending Femi the contract", "ordering the cake", "updating my CV", "fixing the bike tyre",
+      "cancelling the gym membership", "writing the wedding speech", "filing the expense report", "repainting the hallway",
+      "sorting the photo album", "returning the drill to Hamid", "replying to the vendor", "checking the smoke alarms",
+      "booking a dog sitter", "emailing the landlord", "planning the vegetable patch", "descaling the kettle",
+      "applying for the parking permit", "backing up the laptop", "choosing tiles for the bathroom", "buying a gift for Ola",
+      "booking the car service", "tidying the loft", "learning the wedding song", "drafting the hiring plan", "cleaning the oven"
+    ]
+  },
+  "vp_event": {
+    "label": "T", "intent": "event",
+    "items": [
+      "meet Ilse for coffee", "have lunch with the design team", "catch up with Femi", "get drinks with Rosa",
+      "go climbing with Teo", "see the orthodontist", "grab dinner with my parents", "fly to Lisbon", "play tennis with Ruby",
+      "watch the match with Dev", "visit Aunt Mira", "attend the GDPR webinar", "run the onboarding session",
+      "interview the backend candidate", "jam with the band", "walk the canal path with Hugo", "meet the new neighbours",
+      "take Mia to the dentist", "drive Gran to the hospital", "go to the farmers market", "video call the Berlin office",
+      "meet the wedding photographer", "pitch the redesign to Northwind", "present the roadmap to sales", "see the flat",
+      "go to Ola's housewarming", "take the dog to the groomer", "do a site visit with the builders",
+      "have a call with the accountant", "watch the school play", "go to pottery class", "meet the mortgage advisor"
+    ],
+    "traps": [
+      "watch Monday Night Football with Dev", "see Twelfth Night with Ruby", "meet April for a run",
+      "go to June's retirement party", "run the 10k with Femi"
+    ]
+  },
+  "vp_past": {
+    "label": "T", "intent": "none",
+    "items": [
+      "paid the electricity bill", "called the plumber", "sent the slides to Priya", "booked the car service",
+      "renewed the car insurance", "did the food shop", "finished the tax return", "fixed the bike tyre", "emailed the landlord",
+      "returned the drill to Hamid", "cancelled the gym membership", "picked up the dry cleaning", "signed the permission slip",
+      "ordered the cake", "took out the recycling", "replied to the vendor", "bought Gran's card", "topped up the transit card",
+      "moved the haircut", "sorted the photo album", "prepared the forecast", "arranged the delivery", "set up the printer", "sorted out the car tax", "booked the kids' flu jabs", "added Ola to the calendar", "confirmed the caterer", "put the bins out", "got the boiler serviced", "planned the offsite agenda"
+    ]
+  },
+  "np_event": {
+    "label": "T", "intent": "event",
+    "items": [
+      "coffee with Ilse", "haircut", "parent-teacher meeting", "team offsite kickoff", "sprint retro", "yoga class",
+      "piano lesson for Mia", "vet appointment for Biscuit", "Hamid's birthday drinks", "interview with the Acme recruiter",
+      "design crit", "meeting with the tax advisor", "climbing session with Teo", "kids' swim practice", "physio", "date night",
+      "wine tasting", "pottery workshop", "landlord walkthrough", "car service", "dermatologist appointment", "eye test",
+      "a quick sync with legal", "the all-hands", "a call with the Berlin office", "lunch w Marta", "drinks with the uni crew",
+      "Ola's housewarming", "Leo's graduation", "karaoke night", "board meeting", "investor update call",
+      "onboarding session for new hires", "client pitch rehearsal", "hackathon kickoff", "PTA meeting", "chess club",
+      "swimming lesson", "mortgage advisor call", "therapy session", "sushi making class", "tennis with Ruby", "D&D night",
+      "family video call", "hair appointment", "dog grooming", "MRI scan", "wedding rehearsal dinner", "school play",
+      "running club", "salsa class", "performance review with Daria", "coffee chat with the new hire", "architecture review",
+      "release planning", "incident postmortem", "customer demo for Northwind", "dinner with the Nowaks", "quiz night",
+      "Mia's ballet recital", "flat viewing", "garden centre trip", "guitar lesson", "cooking class with Dami",
+      "farewell lunch for Kemal", "football training", "book signing", "gym session with Femi", "conference call with suppliers",
+      "grant review panel", "thesis defence rehearsal", "driving lesson", "ultrasound appointment", "open studio night",
+      "street party planning meeting", "choir practice", "volunteer shift", "bike maintenance workshop",
+      "shift", "night shift", "trip to Gdańsk", "watch party",
+      "camping trip"
+    ],
+    "traps": [
+      "5-a-side football", "1:1 with Kemal", "weekly sync with the ops team", "monthly book swap",
+      "Monday Night Football watch party", "April's baby shower", "Summer's leaving do", "the daily design huddle",
+      "June's retirement party", "Will's stag do", "a 2nd interview with Acme", "the 10k charity run"
+    ]
+  },
+  "away": {
+    "label": "T", "intent": "event",
+    "items": [
+      "on leave", "off", "out of office", "on holiday", "away", "off sick", "on vacation", "OOO",
+      "at the conference", "on parental leave", "travelling", "working from Kraków", "unavailable", "on a training course"
+    ]
+  },
+  "np_task": {
+    "label": "T", "intent": "task",
+    "items": [
+      "the gym bag", "Mia's lunch money", "the recycling", "the car insurance renewal", "the parking permit form",
+      "Gran's birthday card", "the signed lease", "the water bill", "the dry cleaning", "my reading glasses",
+      "the spare keys for Ilse", "the laptop charger", "the school trip forms", "the rent transfer", "the visa photos",
+      "the dog's flea treatment", "the cake for Ola", "the bin collection", "the boiler service", "the receipts for the tax return",
+      "Zoe's packed lunch", "the plant food", "the tickets for the gig", "the deposit for the venue"
+    ],
+    "traps": ["April's present", "the monthly invoice", "the weekly meal plan", "the 2nd draft"]
+  },
+  "vps": {
+    "label": "T", "intent": "task",
+    "items": [
+      "call the landlord | about the leaking tap", "email Priya | the signed contract", "ask Olu | whether he can host",
+      "book a table | for Ilse's birthday", "send the deck | to the board", "pick up the cake | from Gail's",
+      "talk to Daria | about the promotion", "pay Marek | back for the gig tickets", "buy a gift | for the office Secret Santa",
+      "check with the bank | about the mortgage rate", "drop the car | at the garage", "ask the builders | for an updated estimate",
+      "message the group | about the carpool", "order the curtains | for the spare room", "chase Northwind | about the overdue payment",
+      "text Hugo | the wifi password", "send Gran | the holiday photos", "ask Dami | to water the plants",
+      "return the router | to the broadband company", "book the vet | for Biscuit's check-up", "call the school | about Mia's absence",
+      "email the council | about the pothole", "write to the airline | about the lost bag", "ask Teo | if he wants to join"
+    ]
+  },
+  "evs": {
+    "label": "T", "intent": "event",
+    "items": [
+      "dinner | with the in-laws", "call | with the Berlin office", "drinks | with the uni crew", "coffee | with Ilse",
+      "review session | with the auditors", "lunch | with Femi and Rosa", "walk | with Hugo and the dogs",
+      "catch-up | with the Northwind team", "planning session | for the street party", "demo | for the Acme folks",
+      "workshop | with the design agency", "video call | with Aunt Mira", "training session | for the new cashiers",
+      "rehearsal | for the school play"
+    ]
+  },
+  "day": {
+    "label": "DAY",
+    "items": [
+      "today", "tomorrow", "tmrw", "tmr", "tonight", "friday", "[W on] friday", "fri", "this friday", "next tuesday", "next tue",
+      "[W on] monday", "mon", "wednesday", "wed", "thurs", "[W on] thursday", "sat", "sunday", "[W on] sunday", "this weekend",
+      "[W on] the 14th", "[W on] oct 20", "oct 20", "october 20th", "20 oct", "[W on] 10/20", "2026-11-02", "in 3 days", "in two weeks",
+      "in a week", "next week", "the day after tomorrow", "thursday morning", "sunday evening", "monday afternoon",
+      "first thing monday", "early next week", "[W sometime] next week", "next month", "[W on] nov 3rd", "this saturday", "next sat",
+      "later today", "end of the week", "dec 1"
+    , "in a fortnight", "a fortnight from now", "nxt wk", "wk of the 14th", "sept 4", "[W on] 4 sept", "jan 12th", "tues", "thur", "2moro", "tdy", "10/20", "[W on] 2026-11-02",
+      "next month 12", "next month the 5th", "[W on] the 20th next month", "this month 28", "next month on the 9th"]
+  },
+  "clock": {
+    "label": "CLOCK",
+    "items": [
+      "[W at] 4pm", "[W at] 4", "4pm", "[W at] 9:30", "9:30am", "[W at] 16:00", "[W at] noon", "noon", "[W at] midnight", "[W around] 3", "[W at about] 7",
+      "[W at] half past 2", "[W at] quarter to 6", "[W at] 10ish", "[W at] 7 sharp", "[W at] eight", "[W at] 8.15pm", "10am", "[W at] 11", "6:45",
+      "[W at] 5:30pm", "[W around] lunchtime", "[W at] 3 o'clock"
+    , "[W at] midday", "midday", "[W at] 4p", "[W @] 3pm", "@3"]
+  },
+  "datetime": {
+    "label": "DAY",
+    "items": [
+      "[DAY tomorrow] [W at] [CLOCK 9]", "[DAY tmrw] [CLOCK 9am]", "[DAY fri] [CLOCK 3pm]", "[DAY next mon] [W at] [CLOCK 10]",
+      "[DAY tonight] [W at] [CLOCK 8]", "[DAY sunday] [CLOCK 11am]", "[W on] [DAY the 14th] [W at] [CLOCK noon]",
+      "[DAY oct 20] [W at] [CLOCK 6:30pm]", "[DAY today] [W at] [CLOCK 5]", "[DAY thursday] [CLOCK 2:15pm]",
+      "[DAY sat morning] [W at] [CLOCK 9]", "[DAY wednesday] [W at] [CLOCK 4]", "[DAY tomorrow morning] [W at] [CLOCK 8]",
+      "[DAY monday] [CLOCK 9:00]", "[DAY next friday] [W at] [CLOCK 1pm]", "[DAY tue] [CLOCK 18:30]", "[W on] [DAY sunday] [W at] [CLOCK 10]",
+      "[DAY today] [CLOCK 4:30pm]", "[DAY tomorrow] [W around] [CLOCK 2]", "[DAY friday] [W at] [CLOCK noon]",
+      "[DAY 10/20] [W at] [CLOCK 3pm]", "[DAY 2026-11-02] [CLOCK 9am]", "[W on] [DAY 10/20] [W at] [CLOCK 14:00]",
+      "[CLOCK 9am] [DAY tomorrow]", "[W at] [CLOCK 3] [W on] [DAY friday]", "[CLOCK 2pm] [DAY next tue]", "[W at] [CLOCK 11] [W on] [DAY the 3rd]",
+      "[DAY friday the 13th] [W at] [CLOCK 7]", "[DAY mon] [CLOCK 10]", "[DAY thu] [CLOCK 4]", "[DAY nov 3] [CLOCK 9:30]",
+      "[DAY 11/11] [CLOCK 11]", "[DAY 3/4] [W at] [CLOCK 8pm]", "[DAY 2026-12-01] [W at] [CLOCK 10]", "[DAY nov 11] [CLOCK 22:00]", "[DAY sat] [W at] [CLOCK 11pm]", "[W on] [DAY 11/11] [W at] [CLOCK 22]",
+      "[DAY today] [CLOCK 8am]", "[DAY today] [W at] [CLOCK 08:00]", "[DAY tonight] [CLOCK 10pm]", "[DAY this morning] [W at] [CLOCK 8]"
+    ]
+  },
+  "range": {
+    "label": "CLOCK",
+    "items": [
+      "2-3pm", "[W from] 10 to 11", "10am-11:30am", "[W between] 2 and 4", "[W from] 9 till noon", "14:00-15:30", "3 to 5pm", "9-5",
+      "[W from] 6 until 8pm", "11:30-12:15",
+      "22-02", "[W from] 11pm to 2am", "23:00-01:30", "[W from] 10pm till 4",
+      "22:30-00:30"
+    ]
+  },
+  "duration": {
+    "label": "LENGTH",
+    "items": [
+      "[W for] an hour", "[W for] 45 min", "[W for] 2 hours", "[W for] half an hour", "1h30m", "[W for] 90 minutes", "[W for] 20 mins", "[W for] 1.5h",
+      "[W for] three hours"
+    , "1hr", "[W for] 2 hrs", "45m", "[W for] 30 mins", "[W for] 1 hr 15"]
+  },
+  "deadline": {
+    "label": "DUE",
+    "items": [
+      "[W by] friday", "[W by] eod", "[W by] end of day", "[W before] thursday", "[W no later than] the 14th", "[W by] tomorrow noon",
+      "[W before] the weekend", "[W by] next monday", "[W due] friday", "[W due] tmrw", "[W by] the 30th", "[W before] oct 31", "[W by] end of week",
+      "[W by] 5pm today", "[W before] monday morning", "[W by] tonight", "[W by] the end of the month", "[W no later than] wednesday"
+    , "[W by] eow", "[W by] eom", "[W by] nxt fri", "[W due] thurs", "[W by] wk end", "[W by] 10/20", "[W due] 2026-11-02", "[W no later than] 10/20"]
+  },
+  "dayrange": {
+    "label": "DAY",
+    "items": [
+      "mon-wed", "[W from] friday to sunday", "oct 20-22", "all day saturday", "this weekend", "nov 3 to nov 7",
+      "all day on the 14th", "thu to sat", "all day tomorrow", "[W from] the 3rd to the 5th"
+    , "mon thru wed", "jun 3 - jun 9", "tues-thurs", "sat & sun", "fri til sun", "aug 1 to aug 14",
+      "11/11 to 12/11", "3/4-3/7", "nov 11-14",
+      "dec 1 – dec 5", "[W from] 2026-11-11 to 2026-11-14", "11/11-11/12"]
+  },
+  "past": {
+    "label": "DAY",
+    "items": ["yesterday", "last night", "last friday", "two days ago", "earlier today", "this morning", "last week", "a week ago"]
+  },
+  "repeat": {
+    "label": "REPEAT",
+    "items": [
+      "every monday", "every mon and thu", "daily", "weekly", "every day", "every other friday", "every 2 weeks",
+      "each weekday", "every weekday", "monthly", "every month on the 1st", "tuesdays", "[W on] tuesdays", "every year", "yearly",
+      "every morning", "every evening", "twice a week", "every tue and fri", "every 3 months", "once a month", "every sunday night"
+    , "every fortnight", "fortnightly", "every wkday", "wkly", "mthly", "every 2 wks", "every mon & wed", "every other wk", "tues & thurs", "every 3 mos"]
+  },
+  "repeat_start": {
+    "label": "REPEAT",
+    "items": [
+      "[REPEAT every monday] [W starting] [STARTS next week]", "[REPEAT weekly] [W from] [STARTS oct 5]",
+      "[REPEAT every other tue] [W beginning] [STARTS tomorrow]", "[REPEAT daily] [W from] [STARTS monday]",
+      "[REPEAT every weekday] [W starting] [STARTS the 1st]", "[REPEAT every month] [W from] [STARTS next month]",
+      "[REPEAT every tue] [W starting] [STARTS next month]", "[REPEAT daily] [W from] [STARTS tomorrow]",
+      "[REPEAT every other mon] [W starting on] [STARTS the 3rd]", "[REPEAT weekly] [W beginning] [STARTS nov 2]",
+      "[REPEAT every weekday] [W as of] [STARTS monday]", "[REPEAT monthly] [W starting in] [STARTS january]",
+      "[W starting] [STARTS next week] [REPEAT every wed]", "[W from] [STARTS monday] [REPEAT every day]",
+      "[REPEAT every thu] [W effective] [STARTS next week]", "[REPEAT every sat] [W from] [STARTS 10/5]",
+      "[REPEAT twice a week] [W starting] [STARTS tomorrow]", "[REPEAT every fri] [W starting] [STARTS this week]"
+    ]
+  },
+  "place": {
+    "label": "PLACE",
+    "items": [
+      "[W at] Café Nero", "[W at] the Hilton", "@Office", "@HQ", "[W in] Room 3B", "[W at] Brightline HQ", "[W in] the Atrium",
+      "[W at] Riverside Clinic", "[W on] Zoom", "[W via] Teams", "[W at] 22 Elm Street", "[W at] Dev's", "[W in] Lisbon", "[W at] the climbing gym",
+      "[W at] the Crown", "@\"Studio 2\"", "[W at] Northwind's office", "[W in] the boardroom", "[W at] the community centre", "[W on] Google Meet"
+    ]
+  },
+  "tag": {
+    "label": "LIST",
+    "items": [
+      "#work", "#home", "#personal", "#errands", "[CALENDAR #team]", "[CALENDAR #family]", "#health", "#Work", "#Errands",
+      "#health", "[CALENDAR #Family]"
+    ]
+  },
+  "priority": {
+    "label": "PRIORITY",
+    "items": ["!!!", "urgent", "important", "high priority", "asap", "p1", "top priority", "urgently", "as soon as possible", "it's urgent", "critical", "time-sensitive", "high prio", "right away", "super urgent", "!!", "medium priority", "p2", "normal priority", "fairly important", "medium prio", "moderately urgent", "!", "low priority", "p3", "no rush", "not urgent", "low prio", "no hurry", "nice to have", "when you get a chance"],
+    "urgency": {"!!!": "H", "urgent": "H", "important": "H", "high priority": "H", "asap": "H", "p1": "H", "top priority": "H", "urgently": "H", "as soon as possible": "H", "it's urgent": "H", "critical": "H", "time-sensitive": "H", "high prio": "H", "right away": "H", "super urgent": "H", "!!": "M", "medium priority": "M", "p2": "M", "normal priority": "M", "fairly important": "M", "medium prio": "M", "moderately urgent": "M", "!": "L", "low priority": "L", "p3": "L", "no rush": "L", "not urgent": "L", "low prio": "L", "no hurry": "L", "nice to have": "L", "when you get a chance": "L"}
+  },
+  "reminder": {
+    "label": "REMINDER",
+    "items": [
+      "remind me 10 min before", "alert me an hour before", "remind me the day before", "notify me 30 minutes before",
+      "with a reminder 2 hours before", "ping me 15 min before", "remind me 1 day before", "remind me 5 min before",
+      "remind me 2 days before", "remind me a week before", "reminder 1h before", "alert 15m before", "notify me the night before",
+      "with a 10 min reminder", "set a reminder 30 min before", "remind me an hour ahead",
+      "ping me 2 hours before", "alert me 1 day before", "reminder 20 mins prior"
+    ]
+  },
+  "calendar": {
+    "label": "CALENDAR",
+    "items": [
+      "[W on] the team calendar", "[W in] the family calendar", "[W on] the family cal", "[W in] the team calendar", "[W on] the team cal",
+      "[W to] the family calendar", "[W on] our family calendar", "add to team calendar", "[W for] the family cal", "[W on] team calendar",
+      "[W in] family calendar", "[W to] the team calendar", "[W on] the Team calendar", "[W in] the Family cal"
+    ]
+  },
+  "list": {
+    "label": "LIST",
+    "items": [
+      "[W to] my work list", "[W on] my home list", "[W in] the errands list", "[W on] the personal list", "[W to] the health list",
+      "[W to] my errands list", "[W on] the work list", "[W to] health list", "[W in] my personal list", "[W on] the errands list", "[W to] my home list",
+      "[W for] the work list", "[W on] my work list", "[W in] the health list", "onto the home list"
+    ]
+  },
+  "repeat_end": {
+    "label": "REPEAT",
+    "items": [
+      "[REPEAT every monday] [W until] [ENDS may]", "[REPEAT daily] [W for] [ENDS two weeks]",
+      "[REPEAT every tue] [W until] [ENDS the end of term]", "[REPEAT weekly] [W for] [ENDS 6 weeks]",
+      "[REPEAT every other fri] [W until] [ENDS december]", "[REPEAT every weekday] [W until] [ENDS the 20th]",
+      "[REPEAT monthly] [W until] [ENDS next june]", "[REPEAT every wed] [W for] [ENDS the next 8 weeks]",
+      "[REPEAT every day] [W for] [ENDS 10 days]", "[REPEAT every sun] [W till] [ENDS christmas]", "[REPEAT every thu] [W until] [ENDS 12/18]",
+      "[REPEAT every mon and wed] [W for] [ENDS a month]", "[REPEAT daily] [W until] [ENDS friday]",
+      "[REPEAT every 2 weeks] [W until] [ENDS end of year]", "[REPEAT weekly] [W for] [ENDS 4 sessions]",
+      "[REPEAT every tuesday] [ENDS 6 times]", "[REPEAT every morning] [ENDS this week]",
+      "[W for] [ENDS the next six] [REPEAT saturdays]", "[REPEAT every sat] [W through] [ENDS august]",
+      "[REPEAT every mon] [W from] [STARTS next week] [W until] [ENDS june]", "[REPEAT weekly] [W starting] [STARTS oct 5] [W for] [ENDS 8 weeks]",
+      "[W from] [STARTS november] [W through] [ENDS march] [REPEAT every first sunday]",
+      "[REPEAT daily] [W starting] [STARTS tomorrow] [W for] [ENDS a week]",
+      "[REPEAT every other thu] [W from] [STARTS the 2nd] [W until] [ENDS the 30th]"
+    ]
+  },
+  "end": {
+    "label": "END",
+    "items": [
+      "[W until] 5pm", "[W till] 4", "[W until] noon", "[W ending at] 6", "[W ends at] 7:30", "[W to] 5pm", "[W until] 18:00", "[W til] 3", "[W finishing at] 4",
+      "[W until] half past 5", "[W wrapping up at] 6", "[W until] 9pm", "[W till] midnight", "[W until] 11:30", "[W ending around] 5", "[W through] 3pm",
+      "[W until] friday", "[W till] sunday", "[W until] the 14th", "[W finishes at] 10", "[W until] 9:30", "[W till] 10.15", "[W til] 6:45pm",
+      "[W until] 10am", "[W till] 8:30", "[W until] 2:15", "[W til] 11", "[W until] 7.30pm",
+      "[W until] nov 12 at 6:00", "[W to] nov 12 13:00", "[W until] 11/12 at 6", "[W to] 11/12 13",
+      "[W till] saturday at 6am", "[W until] sunday 18:00", "[W to] the 14th at 5pm", "[W until] dec 3 at noon",
+      "[W until] tomorrow at 2", "[W through] friday 5pm", "[W until] 2026-11-12 08:00", "[W until] next monday at 10", "[W till] wed 7:30", "[W until] 3/4 at 11", "[W to] sat 04:00",
+      "[W to] tomorrow 4pm", "[W until] tomorrow at 16:00", "[W till] tmrw 4", "[W until] the day after tomorrow at 9am",
+      "[W to] monday 8am", "[W until] friday at 17:30", "[W through] tomorrow noon", "[W until] sunday evening at 8"
+    ]
+  },
+  "repeat_word": {
+    "label": "W",
+    "items": [
+      "repeat", "repeats", "repeating", "recurring", "on repeat", "make it recurring", "set it to repeat", "and repeat",
+      "repeat it", "rpt", "recurring pls", "as a recurring thing", "set to repeat", "and then repeat"
+    ]
+  },
+  "starts": {
+    "label": "STARTS",
+    "items": [
+      "[W starting] monday", "[W starting] next week", "[W from] monday", "[W from] next month", "[W beginning] tomorrow", "[W starting] the 1st",
+      "[W from] oct 5", "[W starting] next month on the 3rd", "[W beginning] next tuesday", "[W as of] monday", "[W starting] jan 10",
+      "[W from] the 15th", "[W starting] this friday", "[W effective] next week", "[W starting] tmrw", "[W from] nov 1", "[W starting] 3/10",
+      "[W beginning] the 2nd", "[W from] next month 12", "[W starting] next month 21", "[W starting] the 4th next month",
+      "[W from] this month 30"
+    ]
+  },
+  "kind_task": {
+    "label": "KIND",
+    "items": [
+      "todo", "todo:", "to-do:", "t:task", "type:task", "task:", "+", "TODO"
+    ]
+  },
+  "kind_event": {
+    "label": "KIND",
+    "items": [
+      "t:event", "type:event", "event:", "e:event"
+    ]
+  },
+  "length_before": {
+    "label": "LENGTH",
+    "items": [
+      "a 30-minute", "a one-hour", "a 45 min", "an hour-long", "a two-hour", "a 15-minute", "a 90-minute", "a half-hour", "a 20 min", "a 2-hour",
+      "an hour", "a 1h", "a 10-minute", "a three-hour", "a 60 min"
+    ]
+  },
+  "_short": {
+    "monday": ["mon"], "tuesday": ["tue", "tues"], "wednesday": ["wed", "weds"], "thursday": ["thu", "thur", "thurs"],
+    "friday": ["fri"], "saturday": ["sat"], "sunday": ["sun"],
+    "january": ["jan"], "february": ["feb"], "march": ["mar"], "april": ["apr"], "june": ["jun"], "july": ["jul"],
+    "august": ["aug"], "september": ["sep", "sept"], "october": ["oct"], "november": ["nov"], "december": ["dec"],
+    "tomorrow": ["tmrw", "tmr", "tmw", "2moro"], "today": ["tdy", "2day"], "tonight": ["tonite", "2nite"], "yesterday": ["yday"],
+    "next": ["nxt"], "week": ["wk"], "weeks": ["wks"], "weekend": ["wknd", "wkend"], "weekday": ["wkday"], "weekdays": ["wkdays"],
+    "month": ["mo", "mth"], "months": ["mos", "mths"], "year": ["yr"], "years": ["yrs"],
+    "hour": ["hr", "h"], "hours": ["hrs", "h"], "minute": ["min"], "minutes": ["min", "mins", "m"],
+    "weekly": ["wkly"], "monthly": ["mthly"], "through": ["thru"], "until": ["til", "till"], "and": ["&"], "at": ["@"]
+  },
+  "_typos": {
+    "tomorrow": ["tomorow", "tommorow", "tomorrrow", "tmorrow"],
+    "wednesday": ["wendsday", "wednsday", "wensday"],
+    "thursday": ["thurdsay", "thrusday", "thursady"],
+    "friday": ["firday", "fridya", "frieday"],
+    "saturday": ["saterday", "saturdy"],
+    "sunday": ["sundya", "sundy"],
+    "monday": ["mondya", "monady"],
+    "tuesday": ["tuesdy", "teusday"],
+    "tonight": ["tonite", "tonigth"],
+    "next": ["nxt", "enxt"],
+    "minutes": ["minuets", "mintues"],
+    "morning": ["mornign", "moring"],
+    "afternoon": ["afternon", "aftrnoon"],
+    "every": ["evry", "everey"],
+    "remind": ["remnd", "reimnd"],
+    "please": ["plz", "pleas"]
+  }
+}

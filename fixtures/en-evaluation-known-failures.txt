@@ -1,0 +1,58 @@
+FAIL	!! return the library books thru at 5
+FAIL	+ send the revised quote by Friday end of day
+FAIL	+ send the revised quote by fri EOD
+RANKING	01:00 UTC+14 call Kiribati team
+FAIL	9:30 thrs portfolio review
+FAIL	At 09:00 JST call Tokyo office
+RANKING	Call Kiribati team at 01:00 UTC+14
+FAIL	Call Tokyo office at 9:00 JST
+FAIL	Conference 12-03-2027 08:00 - 14-03-2027 16:00
+FAIL	Every weekday morning planning from next Monday at 7am
+FAIL	From today till Friday vacations
+FAIL	I'm on sick leave for 3 days from today
+FAIL	Low priority, but remind me to check the garden sprinklers every third Sunday morning, starting in November.
+RANKING	On Friday watch "Next Monday Morning" with Sam
+FAIL	Put an important budget review on my calendar every other Wednesday from 3:30 to 4:15 PM, beginning the first week of November and continuing through March.
+RANKING	Schedule an urgent 30-minute incident review with the operations team every Tuesday and Thursday at 10 AM, starting next week.
+FAIL	Starting next Monday, remind me every weekday at 8:15 AM to review the incident queue, and make it high priority.
+FAIL	Sunday family barbecue at 13:00 for 120 minutes #family
+RANKING	Watch "Next Monday Morning" with Sam on Friday
+RANKING	call Kiribati team 1am UTC+14
+FAIL	call Tokyo office 9am JST
+RANKING	call with johh starting next month 7, and then till end of year repeat every week
+FAIL	can we do one-on-one with manager Monday morning
+FAIL	can we do portfolio review on thrs at half past nine
+FAIL	can we lunch with Sarah on thue 12
+FAIL	can we sync with engineering tomorrow, 10:30ish
+FAIL	conference from 12-03-2027 8:00 to 14-03-2027 16:00
+FAIL	conference from 12-03-2027 at 8:00 until 14-03-2027 at 16:00
+FAIL	dinner with Chris next weds, eighteen hundred
+FAIL	engineering sync tomorrow, 10:30ish
+FAIL	frid 8am school drop-off
+FAIL	lunch Sarah thue at noon
+FAIL	lunch with Sarah, thue at noon
+FAIL	mon 2ish catch-up with Jo
+FAIL	mon 9ish one-on-one with manager
+FAIL	need send the proposal next week after lunch urgent
+FAIL	next Sunday birthday lunch at noon for 180 minutes #family
+FAIL	next wed 12 lunch and learn
+FAIL	next week after lunch send the proposal please !!!
+FAIL	on sick leave today for 3 days
+FAIL	portfolio review thrs morning at 9:30
+FAIL	project check-in thurs at 2, half hour
+FAIL	remind me to watch Saturday Night Live
+FAIL	roadmap review this fry 1pm
+FAIL	school drop-off frid at 8
+FAIL	school drop-off frid morning at eight
+FAIL	send the proposal Monday after lunch, urgent
+FAIL	t:task send the revised quote fri by 5ish
+FAIL	thrs portfolio review 9:30
+FAIL	thru 5 return the library books !!
+FAIL	thue 12pm lunch Sarah
+FAIL	thue 12pm lunch with Sarah
+FAIL	thue lunch Sarah 12
+FAIL	thue lunch with Sarah 12
+FAIL	today for 3 days i'm on sick leave
+FAIL	todo rewatch Saturday Night Live
+FAIL	type:task send the revised quote by EOD Friday
+RANKING	watch "Next Monday Morning" with Sam fri

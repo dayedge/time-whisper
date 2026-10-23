@@ -1,0 +1,11 @@
+No third-party source code is bundled with time-whisper.
+
+BUILD AND RUNTIME DEPENDENCIES
+Kotlin standard library, kotlinx-datetime and kotlinx-coroutines: JetBrains, Apache-2.0.
+AppKit (NSSpellChecker) on macOS is a system framework and is not redistributed.
+Gradle wrapper: Gradle, Apache-2.0.
+Swift Transformers, Swift Jinja and Swift Hugging Face: Hugging Face, Apache-2.0.
+yyjson: YaoYuan, MIT (transitive dependency of the Swift tokenizer).
+Swift package dependencies retain their upstream license files in their distributions.
+The trained model and its tokenizer are distributed separately by time-whisper-model.
+Apache-2.0 text: https://www.apache.org/licenses/LICENSE-2.0

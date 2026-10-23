@@ -1,0 +1,32 @@
+{
+  "language": "en",
+  "reference": "2026-09-23T12:00:00Z",
+  "timeZone": "UTC",
+  "destinations": [
+    {
+      "id": "work",
+      "name": "Work",
+      "kind": "taskList"
+    },
+    {
+      "id": "personal",
+      "name": "Personal",
+      "kind": "taskList"
+    },
+    {
+      "id": "home",
+      "name": "Home",
+      "kind": "taskList"
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "kind": "calendar"
+    },
+    {
+      "id": "family",
+      "name": "Family",
+      "kind": "calendar"
+    }
+  ]
+}

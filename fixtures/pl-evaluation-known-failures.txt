@@ -1,0 +1,174 @@
+FAIL	!!! złóż wniosek w przyszły wt. 15:00
+FAIL	#zespół w październiku piątego wyjazd firmowy na cały dzień
+FAIL	#zespół wyjazd firmowy 05.10 przez cały dzień
+FAIL	+ dzisiaj o szóstej po południu odbierz rzeczy z pralni #osobiste
+FAIL	+ obejrzyj ponownie Saturday Night Live
+FAIL	+ przygotuj 1:1 z Samem
+FAIL	+ w maju dziesiątego zadzwoń
+FAIL	+ wyjmij lunch z zamrażarki jutro w południe powiadom 10min wcześniej
+FAIL	+ wyślij poprawioną wycenę do końca dnia w piątek
+FAIL	+ wyślij poprawioną wycenę do pt. EOD
+FAIL	+ zaplanuj bieg na 5 km
+FAIL	10:30 jutro, spotkanie z inż.
+FAIL	11:30 w czwatrek spotkanie kwartalne
+FAIL	13:00-14:30 w przyszły poniedziałek sesja planowania w Conference Room B
+FAIL	1:1 z Samem w ten piątek, o drugiej po południu
+FAIL	3 października dzień otwarty 10:00-12:00 #rodzina
+FAIL	Cały dzień 5 października wyjazd firmowy #zespół
+FAIL	Co drugi dzień o 21:30 robić ćwiczenia rozciągające.
+RANKING	Co dwa tygodnie w piątek o 17 zrobić kopię zapasową.
+FAIL	Co roku 15 marca o dziewiątej rano przypomnij o rozliczeniu podatku.
+FAIL	Demo aplikacji w czwartek 15.10 o 14:00, potrwa godzinę.
+RANKING	Dzisiaj o 18.45 zamówić karmę dla psa.
+FAIL	Dziś na 3 dni jestem na zwolnieniu lekarskim
+RANKING	Kupić bilety na koncert w sobotę za tydzień o 10:00.
+FAIL	Lunch urodzinowy w przyszłą niedzielę od południa do 15 #rodzina
+FAIL	Lunch z Priyą jutro w południe
+FAIL	Możemy wpisać: przegląd budżetu w Main Office w ten piątek, 14-16?
+FAIL	Możesz wpisać planowanie kwartalne jutro 10:00-10:45 do kalendarza zespołu?
+RANKING	Na 15 listopada o godzinie dwunastej zaplanować przegląd samochodu.
+FAIL	Na pojutrze na 9 rano zaplanuj opłacenie rachunków.
+FAIL	Na zwolnieniu lekarskim od dzisiaj na 3 dni
+RANKING	O 01:00 UTC+14 zadzwoń do zespołu z Kiribati
+FAIL	O 9:00 JST telefon do Tokio
+FAIL	O szóstej trzydzieści rano w poniedziałek przygotować rzeczy na trening.
+RANKING	Obejrzyj "Następny Poniedziałek" z Samem w piątek
+FAIL	Od 15 do 16 za tydzień idziemy na kręgle.
+RANKING	Od jutra codziennie o siódmej rano brać witaminy.
+FAIL	Od przyszłego tygodnia we wtorki i czwartki o 7:15 robić trening siłowy.
+RANKING	Odebrać paczkę w piątek o 16:30.
+FAIL	Przegląd budżetu w Main Office w ten piątek między 14 a 16
+FAIL	Przejrzyj szkic "Co Drugi Tydzień" w czwartek
+RANKING	Przygotować dokumenty na spotkanie, jutro o dwudziestej.
+RANKING	Przypominaj o podlaniu kwiatów co trzeci dzień o 19.
+FAIL	Pt 18:00 hackathon do sob. 4:00
+FAIL	Rozmowa z Piotrem na 17 listopada, godzina ósma trzydzieści.
+FAIL	Sprawdź umowę w czwartek o 13 przez 60 minut !!!
+FAIL	Telefon do Tokio o 9:00 JST
+FAIL	Umów 1:1 z Tomkiem od przyszłej środy co dwa tygodnie, od 17 do 18.
+FAIL	W Sylwestra od 20:00 do drugiej w nocy impreza u Pawła.
+FAIL	W czwartek przejrzyj szkic "Co Drugi Tydzień"
+FAIL	W kalendarzu zespołu jutro planowanie kwartalne od 10 do 10:45
+FAIL	W każdy piątek o 15:00 przegląd tygodnia przez godzinę.
+RANKING	W każdy poniedziałek o 8:30 przejrzeć zadania na tydzień.
+FAIL	W piątek 14:00-16:00 przegląd budżetu w Main Office
+RANKING	W piątek obejrzyj "Następny Poniedziałek" z Samem
+FAIL	W piątek w południe lunch z Kwietniem
+RANKING	W przyszły piątek, około 17:00, kupić prezent dla mamy.
+FAIL	W przyszły pon. sesja planowania w Conference Room B od 13 do 14:30
+FAIL	W przyszły wtorek od dziewiątej do wpół do jedenastej warsztaty.
+RANKING	W środę po południu, o 15:30, odebrać wyniki badań.
+RANKING	W środę za dwa tygodnie o 14 sprawdzić stan konta.
+FAIL	Wpisz planowanie kwartalne do kalendarza zespołu na jutro, od 10 do 10:45
+FAIL	Wpisz spotkanie z prawnikiem na 12/11/2026 o 13.45.
+FAIL	Wyjazd firmowy 5 października przez cały dzień #zespół
+RANKING	Wysłać fakturę 21.10 o 15:45.
+FAIL	Wysłać zgłoszenie do urzędu do 30 listopada, najpóźniej o 16.
+FAIL	Za trzy dni o siódmej wieczorem kino z rodziną.
+RANKING	Zadzwonić do dentysty w najbliższy czwartek o wpół do dziesiątej.
+RANKING	Zadzwoń jutro o 17 do ubezpieczyciela.
+FAIL	Zaplanuj przegląd sprintu na 27.10 od 11 do 12:30.
+RANKING	Zapłacić za internet 25 października do 18:00.
+FAIL	Zrobić przelew za mieszkanie każdego dziesiątego dnia miesiąca o ósmej rano.
+FAIL	czwatrek 12:00 lunch Sara
+FAIL	czwatrek 12:00 lunch z Sarą
+FAIL	czwatrek lunch Sara 12
+FAIL	do piątku do piątej po południu wyślij fakturę !!!
+FAIL	do zrobienia kup 2 bilety
+FAIL	do zrobienia maszeruj do biura
+FAIL	do zrobienia napisz do Kwietnia
+FAIL	do zrobienia obejrzyj Saturday Night Live
+FAIL	do zrobienia obejrzyj ponownie Saturday Night Live
+FAIL	do zrobienia porównaj ceny iPhone 15
+FAIL	do zrobienia przeczytaj Friday Night Lights
+FAIL	do zrobienia przeczytaj rozdziały 3-5
+FAIL	do zrobienia przygotuj 1:1 z Samem
+FAIL	do zrobienia przygotuj pokój 101
+FAIL	do zrobienia sprawdź raport Q3
+FAIL	do zrobienia uporządkuj paragony
+FAIL	do zrobienia zadzwoń do Czerwca
+FAIL	do zrobienia zainstaluj wersję 2.0
+FAIL	do zrobienia zaplanuj bieg na 5 km
+FAIL	do zrobienia zarezerwuj pokój 101
+FAIL	do zrobienia zasięgnij drugiej opinii
+FAIL	jestem na zwolnieniu lekarskim od dziś przez 3 dni
+FAIL	jutr 10:30 spotkanie z inż.
+FAIL	jutr 10:30 spotkanie z inżynierami
+FAIL	klub biegowy w czwartki od przyszłego tygodnia 7:30-8 rano
+FAIL	klub książki w przyszłą srodę o siódmej wieczorem
+FAIL	klub książki w przyszłą środe o 19
+FAIL	lekcja języka we wtorki od przyszłego wtorku o 18:00
+FAIL	lunch Sara w czwrtek w południe
+FAIL	lunch z Sarą w czwrtek w południe
+FAIL	lunch z nauką w przyszłą śr. w południe
+FAIL	możemy wpisać: kolacja z Chrisem w przyszłą śr. koło szóstej po południu?
+FAIL	możemy wpisać: prezentacja produktu w przyszłą środe o czwartej po południu?
+FAIL	możemy zrobić brunch z Niną w sob. koło jedenastej?
+FAIL	możemy zrobić klub książki w przyszłą środe koło siódmej wieczorem?
+FAIL	możemy zrobić lunch z Sarą w czwatrek o 12?
+FAIL	możemy zrobić lunch z nauką w przyszłą środę w południe?
+FAIL	możemy zrobić pickleball we wt. koło piątej po południu?
+FAIL	możemy zrobić przegląd planu rozwoju w piątek o pierwszej po południu?
+FAIL	możemy zrobić przegląd portfolio w czwrtek wpół do dziesiątej rano?
+FAIL	możemy zrobić spacer z tatą w sobotę o trzeciej po południu?
+FAIL	możemy zrobić spotkanie 1:1 z szefem w poniedziałek rano koło dziewiątej?
+FAIL	o 11 w sobte brunch z Niną
+RANKING	obejrzyj "Następny Poniedziałek" z Samem pt.
+FAIL	oddaj książki do biblioteki w czwartek o piątej po południu średni priorytet
+FAIL	odwiezienie do szkoły w piontek o 8
+FAIL	odwiezienie do szkoły w piątek rano o ósmej
+FAIL	omówienie projektu graficznego jutro o drugiej po południu przez 30 min
+FAIL	piontek 13:00 przegląd planu rozwoju
+FAIL	pon. mniej więcej 14 spotkanie z Jo
+FAIL	posprzątaj balkon w sobotę rano o 10 średni priorytet
+FAIL	prezentacja produktu w przyszłą srodę, 16:00
+FAIL	proszę, wyślij propozycję w przyszłym tygodniu po lunchu pilne
+FAIL	przegląd planu rozwoju w piontek o 13
+FAIL	przejrzyj szkic "Co Drugi Tydzień" czw.
+FAIL	przerwa na kawę w pt. w południe
+FAIL	przypomnij mi: odbierz receptę o piątej po południu
+FAIL	przypomnij mi: zadzwoń do ubezpieczyciela w czwartek o piątej po południu
+FAIL	rozmowa z Taylorem w Office 2026-10-11 11:00
+FAIL	rozmowa z Taylorem w Office na 11 października o 11
+FAIL	spacer z tatą w tę sobotę o trzeciej po południu
+FAIL	spotkanie marketingu w przyszły wt., wpół do szóstej po południu
+FAIL	spotkanie z inż. jutro o 10:30
+FAIL	spotkanie z inżynierami jutr o 10:30
+FAIL	spotkanie z marketingiem w przyszły wtorek wpół do piątej po południu
+FAIL	t:task sprawdź wyniki premiery za 1 tydzień o 11 rano #praca
+FAIL	t:task wyślij poprawioną wycenę w piątek do około piątej po południu
+FAIL	telefon do Tokio 9:00 JST
+FAIL	type:task odbierz receptę dziś o piątej po południu
+FAIL	type:task sprawdź wyniki premiery w przyszłą środę o 11 #praca
+FAIL	type:task wyjmij lunch z zamrażarki jutro w południe przypomnij mi 10min wcześniej
+FAIL	type:task wyślij poprawioną wycenę do EOD w piątek
+FAIL	type:task zadzwoń do ubezpieczyciela jutro o piątej po południu
+FAIL	w czw. omówienie projektu o drugiej po południu przez pół godziny
+FAIL	w czwatrek lunch z Sarą 12
+FAIL	w południe w piątek lunch z Kwietniem
+FAIL	w przyszły piątek o trzeciej po południu kawa z Benem
+FAIL	w przyszły wt. 18:00 lekcja języka co wtorek
+FAIL	w przyszłym tygodniu po lunchu wyślij propozycję proszę !!!
+FAIL	w przyszłą niedzielę lunch urodzinowy w południe przez 180 minut #rodzina
+FAIL	w przyszłą srode wizyta u dentysty 10-11
+FAIL	w przyszłą śrde klub książki 19:00
+FAIL	w przyszłą śrde prezentacja produktu o 16
+FAIL	w przyszłą środe wizyta u dentysty o 10 przez godzinę
+FAIL	w sobte brunch z Niną o 11
+FAIL	we wt. o piątej po południu pickleball
+FAIL	we wtroek 11 badanie kontrolne
+FAIL	wieczór z planszówkami w ten czwrtek o ósmej wieczorem
+FAIL	wizyta u dentysty w przyszłą śrde o 10, jedna godzina
+FAIL	wizyta u dentysty w przyszłą środę o dziesiątej przez sześćdziesiąt minut
+FAIL	wysoki priorytet złóż wniosek na przyszły wtorek o trzeciej po południu
+FAIL	wyślij propozycję w poniedziałek po lunchu, pilne
+FAIL	wyślij propozycję w przyszłym tygodniu koło 13 proszę, wysoki priorytet
+FAIL	zadanie kup 2 bilety
+FAIL	zadanie obejrzyj Saturday Night Live
+FAIL	zadanie obejrzyj ponownie Saturday Night Live
+FAIL	zadanie przygotuj 1:1 z Samem
+FAIL	zadanie zadzwoń do Czerwca
+FAIL	zadanie zaplanuj bieg na 5 km
+FAIL	zadzwoń do Marca w przyszły wt. o siódmej wieczorem
+RANKING	zadzwoń do zespołu z Kiribati 1:00 UTC+14
+FAIL	zamów tusz do drukarki w przyszły czwartek wpół do szóstej po południu średni priorytet

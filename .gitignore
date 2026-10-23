@@ -1,0 +1,11 @@
+.gradle/
+.kotlin/
+.build/
+.swiftpm/
+build/
+.DS_Store
+*.xcuserstate
+__pycache__/
+*.pyc
+.idea/
+.venv/

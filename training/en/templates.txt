@@ -1,0 +1,473 @@
+# Training templates: sentences with {slots}, filled from pools.json. Grouped like sentences.txt.
+# Format and labels: training/prompts/labels.md. Add lines with `make add-sentences FILE=<file>`; a line with a slot is a template.
+
+## 1 Days and times
+# A day, a time, or both, with nothing else to read.
+auto | {vp} {day}
+auto | {day} {vp}
+auto | {vp} {datetime}
+auto | {datetime} {vp}
+auto | {vp}
+auto | {vp} {day} {clock}
+auto | {np_event} {datetime}
+auto | {datetime} {np_event}
+auto | {np_event} {day}
+auto | {np_event} {day} {range}
+auto | {day} {range} {np_event}
+auto | {np_event} {dayrange}
+auto | {dayrange} {np_event}
+auto | {vp_event} {datetime}
+auto | {datetime} {vp_event}
+auto | {datetime}: {np_event}
+auto | {day}: {vp}
+auto | [W at] [DAY some point] {vp}
+auto | [DAY sometime] {day}, {vp}
+auto | {np_event} [W -] {datetime}
+auto | {vps.1} {day} {vps.2}
+auto | {vps.1} {datetime} {vps.2}
+auto | {evs.1} {datetime} {evs.2}
+task | {vp} [T and] {vp#2} {day}
+task | {vp} [T then] {vp#2} {datetime}
+task | {vp} [T before] {np_event} {day}
+task | {vp} [T for] {np_event} {day}
+auto | {np_event} [W is] {datetime}
+auto | {np_event} {range} {day}
+auto | {clock} {np_event} {day}
+auto | {away} {dayrange}
+
+## 2 Ends and lengths
+# An end said apart from the start (END), and how long an event lasts (LENGTH).
+auto | {np_event} {day} {clock} {duration}
+auto | {np_event} {duration} {datetime}
+auto | {np_event} {duration}
+auto | {duration} {np_event} {day}
+auto | {np_event} {day} {clock} {end}
+auto | {datetime} {np_event} {end}
+auto | {np_event} {datetime} {end}
+auto | [W block] {day} {clock} {end} [W for] {np_event}
+auto | [W i'm at] {np_event} {day} {clock} {end}
+auto | {day} {np_event} [W from] {clock} {end}
+auto | [W put] {np_event} [W in] {datetime} {end}
+auto | {np_event} {datetime} {duration}
+auto | {duration} {np_event} {datetime}
+auto | [W block] {duration} {day} [W for] {np_event}
+auto | [W book] {np_event} {datetime} {duration}
+auto | {np_event} {datetime} {end} {place} {calendar}
+auto | [W can you put in] {np_event} {datetime} {end}
+auto | [W i've got] {np_event} {day} {clock} {end}, [W thanks]
+auto | {np_event} [W is] {datetime} {end}
+auto | [W schedule] {np_event} {day} [W from] {clock} {end}
+auto | {day}: {np_event} {clock} {end}
+auto | {np_event} {clock} {end} {day} {place}
+auto | [W please book] {np_event} {day} {clock} {end}
+auto | [W add] {np_event} {datetime} {end} {calendar}
+auto | [W schedule] {length_before} {np_event} {datetime}
+auto | [W book] {length_before} {np_event} {day}
+auto | {length_before} {np_event} {datetime} {place}
+auto | [W can we do] {length_before} {np_event} {day}?
+auto | [W can you schedule] {np_event} {datetime}, {duration}
+auto | {np_event} {datetime}, [W should take] {duration}
+auto | [W need] {duration} [W for] {np_event} {day}
+auto | [W i'd like] {np_event} {duration} {day}
+auto | [W reserve] {duration} {day} [W for] {np_event}
+auto | {day}, {clock} {np_event} {end}
+auto | {datetime} {vp_event} {end}
+auto | [W i will be] {away} [W from] {datetime} {end}
+auto | [W i'll be] {away} {datetime} {end}
+auto | [W i'm] {away} [W from] {datetime} {end}
+auto | {away} [W from] {datetime} {end}
+auto | {away} {datetime} {end}
+auto | [W put me down as] {away} [W from] {datetime} {end}
+auto | [W mark me] {away} {datetime} {end}
+
+## 3 Deadlines
+# When a task is due (DUE), against an event's end.
+auto | {vp} {deadline}
+auto | {deadline} {vp}
+auto | {vp} {deadline} {priority}
+auto | {priority} {vp} {deadline}
+auto | {vp} {deadline} {tag} {priority}
+auto | {vp} {list} {deadline}
+auto | {np_task} {deadline}
+auto | {vp} {deadline} [W at the latest]
+auto | {vp} {deadline}, {reminder}
+auto | {tag} {priority} {vp} {deadline}
+auto | {vp}. {deadline}.
+auto | {deadline}: {np_task}
+auto | {vp_ing} {deadline}
+auto | {vps.1}, {deadline}, {vps.2}
+task | {vp}, {vp#2} [T and] {vp#3} {deadline}
+auto | [W remind me to] {vp} {deadline}
+auto | [W could you remind me to] {vp} {deadline} [W please]
+auto | [W don't forget to] {vp} {deadline}
+auto | [W don't let me not] {vp} {deadline}
+auto | [W i really need to] {vp} {deadline}
+auto | [W need to] {vp} {deadline}
+auto | [W need] {np_task} {deadline}
+auto | [W have to] {vp} {deadline} {priority}
+auto | [W gotta remember to] {vp} {deadline}
+auto | [W i should probably] {vp} {deadline}
+auto | [W must] {vp} {deadline}
+auto | [W try and] {vp} {deadline}
+auto | [W make sure to] {vp} {deadline}
+auto | [W be sure to] {vp} {deadline}
+auto | [W it's on me to] {vp} {deadline}
+auto | [W i can't not] {vp} {deadline}
+auto L | [PRIORITY if you get a sec,] {vp} {deadline}
+auto | [W in case i forget,] {vp} {deadline}
+auto | [W can someone] {vp} {deadline}?
+auto | [W for the love of god] {vp} {deadline}
+auto | [W ugh,] {vp} {deadline}
+auto | [KIND +] {vp} {deadline}
+auto | [W new] [KIND task:] {vp} {deadline}
+auto | [W add] {vp} {list} {deadline}
+auto | {deadline} [W i have to] {vp} [W no matter what]
+auto | [W i need to] {vps.1} {deadline} {vps.2}
+auto | {vp} {deadline} [W pls]
+auto | {vp} {deadline}, [W thanks]
+auto | {vp} {deadline}, [W ideally]
+auto | {vp} {deadline} [W or i'm in trouble]
+auto | {vp} {deadline} [W for real this time]
+auto | {vp} {deadline} [W before i forget again]
+auto | {vp} {deadline} [W unless it rains]
+auto | [W pls pls] {vp} {deadline} [W thx]
+auto H | [PRIORITY urgent:] {vp} {deadline}
+auto H | [PRIORITY !!!] {vp} {deadline}
+auto H | {vp} {deadline}, [PRIORITY it's urgent]
+auto H | [PRIORITY top priority:] {vp} {deadline}
+auto H | {vp} {deadline} [W -] [PRIORITY this is urgent]
+auto M | {vp} {deadline}, [PRIORITY medium priority]
+auto M | [PRIORITY fairly important:] {vp} {deadline}
+auto L | {vp} {deadline} [W -] [PRIORITY not urgent]
+task | {vp} {deadline}, [W the boss is waiting]
+task | {vp} [W before] [DUE it's too late]
+task | [W really need to] {vp} {deadline} [W or we lose the deposit]
+auto | {priority}: {vp} {deadline}
+auto | [W need to] {vp} {deadline}, {priority}
+auto | {vps.1} {deadline} {vps.2} {priority}
+auto | {vp} {day} {deadline}
+auto | {kind_task} {vp} {deadline}
+auto | {vp} {deadline} {reminder}
+auto | {vp} {deadline} {list}
+auto | {tag} {vp} {deadline}
+auto | {vp} {deadline} {priority} {list}
+auto | [W note to self:] {vp} {deadline}
+auto | {vp} {deadline} [W no matter what]
+auto | {vp} {deadline} [W k thx]
+auto | [W need 2] {vp} {deadline}
+auto | [W must remember:] {vp} {deadline}
+auto | [W promised Ola i'd] {vp} {deadline}
+auto | {vp} [W - seriously,] {deadline}
+auto | [W one more:] {vp} {deadline}
+auto | [W and another thing,] {vp} {deadline}
+
+## 4 Repeats
+# How often (REPEAT), and words that only say an entry repeats (W).
+auto | {vp} {repeat}
+auto | {repeat} {vp}
+auto | {np_event} {repeat} {clock}
+auto | {repeat} {clock} {np_event}
+auto | {np_event} {repeat} {range} {place}
+auto | {vp} {repeat} {tag}
+auto | {repeat} {vp} {tag}
+auto | {vp} {repeat} {clock}
+auto | {np_event} {repeat} {place}
+auto | {vp_event} {repeat}
+auto | {vps.1} {repeat} {vps.2}
+auto | [W remind me to] {vp} {repeat}
+auto | [W never forget to] {vp} {repeat}
+auto | [W set up] {length_before} {np_event} {repeat}
+auto | {datetime} {np_event} {end} {repeat}
+auto | {day} {clock} {np_event} {end} {repeat}
+auto | {repeat} {clock} {np_event} {end}
+auto | {np_event} {repeat} {clock} {end}
+auto | {clock} {np_event} {end} {repeat}
+auto | {np_event} {clock} {repeat_word} {repeat}
+auto | {vp} {repeat_word} {repeat}
+auto | {repeat_word} {repeat} {np_event} {clock}
+auto | {vp} {deadline} {repeat_word} {repeat}
+
+## 5 Repeat bounds
+# Where a repeat starts and stops (STARTS, ENDS), a range of days among them.
+auto | {np_event} {repeat_start} {clock}
+auto | {repeat_start} {np_event}
+auto | {repeat_start} {np_event} {clock}
+auto | {vp} {repeat_start}
+auto | [W remind me to] {vp} {repeat_start}
+auto | {np_event} {repeat_end} {clock}
+auto | {repeat_end} {np_event} {clock}
+auto | {vp} {repeat_end}
+auto | [W remind me to] {vp} {repeat_end}
+auto | [W set up] {np_event} {repeat_end}
+auto | {np_event} {clock} {repeat_end}
+auto | {np_event} {repeat_start} {clock} {duration} {place}
+auto | {vp} {repeat_end} {reminder}
+auto | [W schedule] {np_event} {repeat_start} {clock}
+auto | [W please add] {np_event} {repeat_start}
+auto | {repeat_start}, {np_event} {clock}
+auto | [W remind me] {repeat_start} [W to] {vp}
+auto | [W i have] {np_event} {repeat_start} {range}
+auto | [W can you set up] {np_event} {repeat_end}
+auto | [W put] {np_event} [W in] {repeat_end} {clock}
+auto | {repeat_end}, {np_event} {clock}
+auto | [W remind me] {repeat_end} [W to] {vp}
+auto | [W i'm doing] {np_event} {repeat_end} {range}
+auto | {starts} {clock} {np_event} {repeat}
+auto | {starts}, {clock} {np_event} {repeat}
+auto | {starts} {clock} {np_event} {repeat} {duration}
+auto | {starts}, {np_event} {repeat} {clock}
+auto | {starts} {np_event} {clock} {repeat}
+auto | {starts}, {range} {np_event} {repeat}
+auto | {starts}: {np_event} {repeat} {clock}
+auto | {np_event} {starts} {clock}, {repeat_word} {repeat}
+auto | {np_event} {repeat_word} {repeat} {clock} {starts}
+auto | {np_event} {starts} {clock} [W and then] {repeat_word} {repeat}
+auto | {np_event} {clock} {repeat_word} {repeat_end}
+
+## 6 Places, lists and calendars
+# Where an event happens (PLACE), and the list or calendar it goes to.
+auto | {vp} {tag}
+auto | {tag} {vp} {day}
+auto | {np_event} {datetime} {tag}
+auto | {tag} {np_event} {datetime} {place}
+auto | {np_event} {place} {datetime}
+auto | {place} {np_event} {day} {clock}
+auto | {np_event} {datetime} {place} {reminder}
+auto | {vp_event} {place} {day}
+auto | {np_event} {calendar} {datetime}
+auto | {tag} {vp}
+auto | {list} {vp} {day}
+auto | {np_event} {place}
+auto | {place} {np_event}
+auto | {np_event} {dayrange} {place}
+auto | {dayrange} {place} {np_event}
+auto | {calendar} {np_event} {day}
+auto | {evs.1} {place} {evs.2} {datetime}
+auto | {np_event} {datetime} {calendar} {reminder}
+auto | {day}, {np_event}, {place}
+auto | {datetime} {vp_event} {place}
+auto | {evs.1} {day} {evs.2} {place}
+auto | [W please add] {np_event} {calendar} {day}
+auto | [W could you put] {np_event} {calendar} {datetime}?
+auto | [W there's] {np_event} {datetime} {place}
+auto | {np_event} [W is now] {datetime} {place}
+auto | [W can you add] {vp} {list} {priority}
+auto | {kind_task} {vp} {datetime} {tag}
+auto | {np_event} {day} {clock} {place} {reminder}
+auto | {vp} {list}
+auto | [W add] {vp} {list} {day}
+auto | [W put] {vp} {list}
+auto | {np_event} {datetime} {calendar}
+auto | [W add] {np_event} {calendar} {day}
+auto | [W put] {np_event} {calendar} {datetime}
+auto | {calendar}: {np_event} {datetime}
+auto | {np_event} {place} {datetime} {calendar}
+auto | {np_event} {calendar} {place} {day}
+auto | {np_event} {day} {clock} {place}
+
+## 7 Priority, reminders and kind marks
+# Stated urgency (PRIORITY), reminders (REMINDER), and marks that force a kind (KIND).
+auto | {vp} {priority}
+auto | {vp} {day} {reminder}
+auto | {day} {vp} {priority}
+auto | {vp} {reminder}
+auto | {np_task} {day} {priority}
+auto L | [PRIORITY whenever you get a chance,] {vp}
+auto | [KIND todo] {vp} {day}
+auto | [KIND todo:] {vp}
+auto | [KIND t:task] {vp} {datetime}
+auto | [KIND type:event] {np_event} {day}
+auto | {vp} {datetime} [W and] {reminder}
+auto | {np_event} {datetime} [W and] {reminder}
+auto H | [PRIORITY asap:] {vp}
+auto H | [PRIORITY urgent -] {vp} {day}
+auto H | [W need to] {vp} [PRIORITY right away]
+auto H | [PRIORITY critical:] {vp} {day}
+auto H | [W please] {vp} [PRIORITY as soon as possible,] [W thanks]
+auto H | {day} [W i really need to] {vp}, [PRIORITY high priority]
+auto M | [PRIORITY p2] {vp} {day}
+auto M | {vp} {day} [PRIORITY (normal priority)]
+auto L | {vp} [PRIORITY no rush]
+auto L | [PRIORITY no rush,] [W but] {vp} {day} [W would be nice]
+auto L | [PRIORITY low priority:] {vp}
+auto L | [PRIORITY not urgent,] [W but i should] {vp} {day}
+auto L | {vp} [DAY some time,] [PRIORITY no hurry]
+auto | {vp} {priority} {day}
+auto | {day} {vp} [W -] {priority}
+auto | [W remind me to] {vp} {day}, {priority}
+auto | {kind_task} {vp} {day}
+auto | {kind_task} {vp}
+auto | {kind_event} {np_event} {datetime}
+auto | {kind_event} {np_event} {day} {range}
+auto | {np_event} {datetime} {reminder}
+auto | {reminder} {np_event} {datetime}
+auto | [W add] {np_event} {datetime}, {reminder}
+auto | {vp} {day}, {reminder}
+auto | [W new] [KIND event:] {np_event} {datetime}
+auto | {priority} {np_event} {day} {range}
+auto | {np_event} {day} {range} {priority}
+auto | {np_event} {datetime} {duration} {priority}
+auto | {priority} {np_event} {datetime} {duration}
+auto | {np_event} {repeat} {range} {priority}
+auto | {priority} {np_event} {datetime} {duration} {repeat}
+auto | {day} {range} {np_event} [W -] {priority}
+auto | {np_task} {day} {range} {priority}
+auto | {priority} {np_task} {datetime} {duration}
+auto | {vp} {day} {range}, {priority}
+
+## 8 Wrappers
+# Words around the request: asking, chat, politeness, and wrappers in the middle or at the end.
+auto | [W remind me to] {vp} {day}
+auto | [W can you remind me to] {vp} {datetime}?
+auto | [W remind me about] {np_event} {datetime}
+auto | [W remind me] {day} [W to] {vp}
+auto | [W don't let me forget to] {vp} {day}
+auto | [W dont forget] {np_task} {day}
+auto | [W don't let me forget] {np_task} {day}
+auto | [W i need to] {vp} {day}
+auto | [W i have to] {vp} {day} {clock}
+auto | [W i've got to] {vp} {day}
+auto | [W gotta] {vp} {day}
+auto | [W we should] {vp} {day}
+auto | [W i want to] {vp} {day}
+auto | [W you need to] {vp} {day}
+auto | [W i'd like to] {vp_event} {datetime}
+auto | [W i wanna] {vp_event} {day}
+auto | [W try to] {vp} {day}
+auto | [W make sure i] {vp} {day}
+auto | [W note to self:] {vp} {day}
+auto | [W note to self -] {vp}
+auto | [W reminder:] {vp} {datetime}
+auto | [W quick reminder:] {np_event} {datetime}
+auto | [W just a reminder to] {vp} {datetime}
+auto | [W ping me to] {vp} {datetime}
+auto | [W nudge me to] {vp} {day}
+auto | [W tell me to] {vp} {datetime}
+auto | [W my job] {day} [W is to] {vp}
+auto | [W i promised Ilse i'd] {vp} {day}
+auto | [W the plan is to] {vp} {day}
+auto | [W while i remember:] {vp} {day}
+auto | [W random thought, we should] {vp} {day}
+auto | [W could somebody please] {vp} {day}
+auto | [W honestly just] {vp} {day}
+auto | [W add an event:] {np_event} {datetime}
+auto | [W hey, can you add] {np_event} {datetime}?
+auto | [W put] {np_event} [W in my calendar] {datetime}
+auto | [W put] {np_event} [W in the calendar] [W for] {datetime}
+auto | [W add] {vp} [W to my list] {day}
+auto | [W schedule] {np_event} {datetime}
+auto | [W please schedule] {np_event} {day} {range}
+auto | [W set up] {np_event} {datetime}
+auto | [W book me in for] {np_event} {datetime}
+auto | [W pencil in] {np_event} {datetime}
+auto | [W block out time for] {np_event} {day} {range}
+auto | [W block] {range} {day} [W for] {np_event}
+auto | [W let's do] {np_event} {datetime}
+auto | [W let's] {vp_event} {datetime}
+auto | [W how about we] {vp_event} {day}?
+auto | [W how about] {vp_ing} {day}?
+auto | [W can we] {vp_event} {datetime}?
+auto | [W could we maybe] {vp_event} {day} [DAY or so]?
+auto | [W would you mind setting up] {np_event} {datetime}?
+auto | [W is it possible to squeeze in] {np_event} {day}?
+auto | [W any chance we can] {vp_event} {datetime}?
+auto | [W shall we] {vp_event} {day}?
+auto | [W wanna] {vp_event} {datetime}?
+auto | [W up for] {np_event} {day}?
+auto | [W fancy] {np_event} {datetime}?
+auto | [W we've got] {np_event} {datetime}
+auto | [W i have] {np_event} {datetime}
+auto | [W just booked] {np_event} [W for] {datetime}
+auto | [W looks like] {np_event} [W is happening] {datetime}
+auto | {day} [W i need to] {vp}
+auto | {datetime} [W - can we do] {np_event}?
+auto | {day} [W remember to] {vp}
+auto | {day} [W don't forget] {np_task}
+auto | {np_event} [W got moved] [W to] {datetime}
+auto | {np_event} [W has been rescheduled] [W to] {datetime}
+auto | {np_event} [W confirmed] [W for] {datetime}
+auto | {vp} [W - remind me] {datetime}
+auto | {vp}, [W remind me] {datetime}
+auto | [W remind me to] {vps.1} {day} {vps.2}
+auto | [W can we do] {evs.1} {datetime} {evs.2}?
+auto | {vp} {day} [W please]
+auto | {np_event} {datetime} [W if that works]
+auto | {np_event} {datetime} [W if that still works for everyone]
+auto | {vp} {day} [W if i have time]
+auto | {vp} {day} [W lol]
+auto | {np_event} {datetime}, [W cheers]
+auto | {vp} {day} [W no excuses]
+auto | {vp} [W before i forget]
+auto | {vp} {day}. [W seriously.]
+auto | {vp} {day} [W 🙏]
+auto | {np_event} {datetime} [W 🎉]
+auto | {vp} {day} [W if the weather's ok]
+auto | {np_event} {datetime} [W - can't miss this one]
+auto | {np_event} {day} [W i guess]
+auto | {np_event} {datetime} [W right?]
+auto | [W ok so] {np_event} {datetime} [W i think]
+auto | [W hey,] {vp} {day} [W ok?]
+auto | [W reminder for myself:] {vp} {day}, [W don't flake]
+task | [W i'm so behind -] {vp} {day}
+auto | [W just confirmed] {np_event} {datetime}
+auto | [W finally got] {np_event} [W booked in] {datetime}
+auto | {np_event} [W is confirmed for] {datetime}
+auto | [W we're doing] {np_event} {datetime}
+auto | [W heads up:] {np_event} {datetime}
+auto | [W reminder -] {vp} {day}
+auto | [W don't forget:] {np_event} {datetime}
+auto | {np_event} {datetime} [W can't wait]
+auto | {vp} {day} [W or i'm in trouble]
+auto | [W gotta make sure i] {vp} {day}
+auto | [W i should probably] {vp} {day}
+auto | [W ok so] {np_event} [W is] {datetime}
+auto | [W apparently] {np_event} [W got moved to] {datetime}
+auto | [W can we lock in] {np_event} [W for] {datetime}
+auto | [W squeeze] {np_event} [W in] {datetime}
+auto | {datetime} [W works for] {np_event}
+auto | [W reserve] {range} {day} [W for] {np_event}
+auto | [W hold] {day} [W for] {np_event}
+auto | [W tentatively] {np_event} {datetime}
+auto | [W remember i said i'd] {vp} {day}
+auto | [W first thing on the list:] {vp} {day}
+auto | [W also] {vp} {day}
+auto | {vp} {day} [W thanks in advance]
+auto | {np_event} {datetime} [W if that still works]
+auto | [W i will be] {away} {dayrange}
+auto | [W i'm] {away} {dayrange}
+
+## 10 Nothing to create
+# Statements about the past, questions, cancellations, chat.
+none | {np_event} [W was] {past}
+none | {vp_past} {past}
+none | [W already] {vp_past}
+none | [W i already] {vp_past} {past}
+none | [W did i] {vp} {past}?
+none | [W what time is] {np_event} {day}?
+none | [W when is] {np_event}?
+none | [W is] {np_event} [W still on] {day}?
+none | [W never mind about] {np_event} {day}
+none | [W cancel that,] {np_event} {day} [W is off]
+none | [W no need to] {vp} {day} [W anymore]
+none | [W i don't need to] {vp} {day} [W after all]
+none | [W don't worry about] {vp_ing} {day}
+none | [W forget] {np_event} {day}, [W it's cancelled]
+none | [W stop reminding me to] {vp}
+none | {day} [W works for me]
+none | [W i'm free] {datetime}
+none | [W i'm busy] {dayrange}
+none | [W can't make it] {day}
+none | [W how was] {np_event}?
+none | {np_event} [W went well]
+none | [W who's coming to] {np_event} {day}?
+none | [W scratch that, i] {vp_past} {past}
+none | [W never mind,] {np_event} [W is cancelled]
+none | [W cancel] {np_event} {day}
+none | [W was] {np_event} {past} [W any good?]
+
+## 11 Several actions
+# A date for each of several actions.
+task multi | {vp} {day} [T and] {vp#2} {day#2}
+task multi | {day}: {vp}, {day#2}: {vp#2}
+event multi | {np_event} {datetime} [W then] {np_event#2} {datetime#2}
+event multi | {np_event} {datetime}, {np_event#2} {datetime#2}
