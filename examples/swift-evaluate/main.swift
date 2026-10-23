@@ -1,4 +1,6 @@
+#if compiler(>=6.2) && canImport(DataDetection)
 import DataDetection
+#endif
 import Foundation
 import TimeWhisper
 
@@ -18,6 +20,7 @@ let spelling = !arguments.contains("--no-spelling")
 
 /// The system data detector as a date finder. It reports an instant, which is turned back into a local date and time here.
 /// It cannot say which parts the text stated, so those flags are left unset.
+#if compiler(>=6.2) && canImport(DataDetection)
 @available(macOS 26.0, *)
 struct SystemDateFinder: DateFinder {
     func find(_ text: String, request: DateFinderRequest) async throws -> [DateMatch] {
@@ -40,6 +43,8 @@ struct SystemDateFinder: DateFinder {
         return found
     }
 }
+
+#endif
 
 // How results are written down: as the JVM evaluator expects them.
 let weekdayNames = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
@@ -122,8 +127,12 @@ let context = ParseContext(
 let configuration = Configuration(dateOrder: setup.dateOrder.map { $0 == "dayMonth" ? .dayMonth : .monthDay }, language: setup.language)
 let dateFinder: (@Sendable () -> any DateFinder)?
 if arguments.contains("--apple-finder") {
+#if compiler(>=6.2) && canImport(DataDetection)
     guard #available(macOS 26.0, *) else { fatalError("--apple-finder needs macOS 26 or later") }
     dateFinder = { SystemDateFinder() }
+#else
+    fatalError("--apple-finder needs Xcode 26 or later")
+#endif
 } else { dateFinder = nil }
 // Without system spelling, nothing is corrected, so the run is the same on every Mac.
 let spellChecker: (@Sendable () -> any SpellChecker)? = spelling ? nil : { @Sendable in NoSpellChecker() as any SpellChecker }
