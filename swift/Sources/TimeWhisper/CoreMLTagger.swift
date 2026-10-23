@@ -5,10 +5,11 @@ import Tokenizers
 
 /// A `Tagger` backed by the Core ML model that `training/export.py` writes: a folder with `TimeWhisperTagger.mlpackage`,
 /// `tokenizer.json`, `tokenizer_config.json` and `labels.json`. One model serves every language it was trained for, and it
-/// is loaded on first use, so creating a tagger costs nothing.
+/// is loaded on first use, so creating a tagger costs nothing; `prepare()` loads it ahead of the first request.
 public actor CoreMLTagger: Tagger {
     private let folder: URL
     private let computeUnits: MLComputeUnits
+    private let cache: CompiledModelCache?
     /// The model compiled from the package, kept after `close()` so that loading again does not compile again.
     private var compiled: URL?
     private var loaded: Loaded?
@@ -16,8 +17,18 @@ public actor CoreMLTagger: Tagger {
     /// - Parameters:
     ///   - folder: the folder `export.py` wrote.
     ///   - computeUnits: the CPU by default, which is fastest for a model this small (about 1.7 ms a sentence on Apple Silicon).
-    public init(folder: URL, computeUnits: MLComputeUnits = .cpuOnly) {
+    ///   - compiledModelCache: a folder of the host's own (in its Caches directory, say) where the compiled model is kept, so
+    ///     it is compiled once rather than on every launch, and again only when the model or the system changes. Without
+    ///     one, the model is compiled once per process.
+    public init(folder: URL, computeUnits: MLComputeUnits = .cpuOnly, compiledModelCache: URL? = nil) {
         self.folder = folder; self.computeUnits = computeUnits
+        cache = compiledModelCache.map(CompiledModelCache.init)
+    }
+
+    /// Loads the model, the tokenizer and the labels now, so the first request does not wait for them. They stay until
+    /// `close()`, as after a request.
+    public func prepare() async throws {
+        _ = try await load()
     }
 
     /// The labels of the words, split as the parser splits them, and the model's reading of the whole text. A word's label is
@@ -62,15 +73,37 @@ public actor CoreMLTagger: Tagger {
     /// Loads the model, the tokenizer and the labels once.
     private func load() async throws -> Loaded {
         if let loaded { return loaded }
-        let compiled: URL
-        if let known = self.compiled { compiled = known } else { compiled = try await MLModel.compileModel(at: folder.appendingPathComponent("TimeWhisperTagger.mlpackage")) }
-        self.compiled = compiled
-        let configuration = MLModelConfiguration()
-        configuration.computeUnits = computeUnits
         let meta = try JSONDecoder().decode(Meta.self, from: Data(contentsOf: folder.appendingPathComponent("labels.json")))
-        let loaded = try Loaded(model: MLModel(contentsOf: compiled, configuration: configuration), tokenizer: Self.tokenizer(folder), meta: meta)
+        let loaded = try await Loaded(model: model(), tokenizer: Self.tokenizer(folder), meta: meta)
         self.loaded = loaded
         return loaded
+    }
+
+    /// The model, compiled at most once: kept for the process, and in the cache folder when there is one. A cached copy
+    /// that cannot be loaded, or that another process removed, is compiled again.
+    private func model() async throws -> MLModel {
+        let configuration = MLModelConfiguration()
+        configuration.computeUnits = computeUnits
+        if let compiled, FileManager.default.fileExists(atPath: compiled.path) {
+            return try MLModel(contentsOf: compiled, configuration: configuration)
+        }
+        let package = folder.appendingPathComponent("TimeWhisperTagger.mlpackage")
+        guard let cache else {
+            let compiled = try await MLModel.compileModel(at: package)
+            self.compiled = compiled
+            return try MLModel(contentsOf: compiled, configuration: configuration)
+        }
+        var compiled = try await cache.compiled(package)
+        let model: MLModel
+        do {
+            model = try MLModel(contentsOf: compiled, configuration: configuration)
+        } catch {
+            cache.discard(compiled)
+            compiled = try await cache.compiled(package)
+            model = try MLModel(contentsOf: compiled, configuration: configuration)
+        }
+        self.compiled = compiled
+        return model
     }
 
     /// The tokenizer described by tokenizer.json. Its class is taken from the vocabulary's own type, not from

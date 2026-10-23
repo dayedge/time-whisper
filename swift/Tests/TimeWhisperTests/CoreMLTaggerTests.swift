@@ -54,4 +54,65 @@ final class CoreMLTaggerTests: XCTestCase {
             XCTAssertEqual(tagging.urgency[.high] ?? 0, reference.urgency[3], accuracy: 0.02, reference.text)
         }
     }
+
+    // MARK: Compiled model cache
+
+    private func cacheFolder() throws -> URL {
+        let folder = FileManager.default.temporaryDirectory.appendingPathComponent("TimeWhisperCache-\(UUID().uuidString)")
+        addTeardownBlock { try? FileManager.default.removeItem(at: folder) }
+        return folder
+    }
+    private func copies(_ cache: URL) throws -> [String] {
+        try FileManager.default.contentsOfDirectory(atPath: cache.path).filter { $0.hasSuffix(".mlmodelc") }.sorted()
+    }
+
+    func testTheCompiledModelIsKeptAcrossTaggers() async throws {
+        let folder = try folder()
+        let cache = try cacheFolder()
+        try await CoreMLTagger(folder: folder, compiledModelCache: cache).prepare()
+        let first = try copies(cache)
+        XCTAssertEqual(first.count, 1)
+        let made = try FileManager.default.attributesOfItem(atPath: cache.appendingPathComponent(first[0]).path)[.creationDate] as? Date
+
+        // A new tagger, as after a restart: the same copy, not compiled again.
+        let tagger = CoreMLTagger(folder: folder, compiledModelCache: cache)
+        let tagging = try await tagger.tag("call Bob tomorrow", language: "en")
+        XCTAssertEqual(tagging.tokens.count, 3)
+        XCTAssertEqual(try copies(cache), first)
+        XCTAssertEqual(try FileManager.default.attributesOfItem(atPath: cache.appendingPathComponent(first[0]).path)[.creationDate] as? Date, made)
+    }
+
+    func testACopyForAnotherModelIsRemoved() async throws {
+        let folder = try folder()
+        let cache = try cacheFolder()
+        let stale = cache.appendingPathComponent("TimeWhisperTagger-0000000000000000.mlmodelc")
+        try FileManager.default.createDirectory(at: stale, withIntermediateDirectories: true)
+        try await CoreMLTagger(folder: folder, compiledModelCache: cache).prepare()
+        let kept = try copies(cache)
+        XCTAssertEqual(kept.count, 1)
+        XCTAssertNotEqual(kept.first, stale.lastPathComponent, "an older model's copy goes once the new one is compiled")
+    }
+
+    func testADamagedCopyIsCompiledAgain() async throws {
+        let folder = try folder()
+        let cache = try cacheFolder()
+        try await CoreMLTagger(folder: folder, compiledModelCache: cache).prepare()
+        let copy = cache.appendingPathComponent(try copies(cache)[0])
+        try FileManager.default.removeItem(at: copy)
+        try FileManager.default.createDirectory(at: copy, withIntermediateDirectories: true)
+
+        try await CoreMLTagger(folder: folder, compiledModelCache: cache).prepare()
+        XCTAssertEqual(try copies(cache), [copy.lastPathComponent])
+        XCTAssertTrue(FileManager.default.fileExists(atPath: copy.appendingPathComponent("coremldata.bin").path), "compiled in full")
+    }
+
+    func testTheKeyFollowsTheContents() throws {
+        let package = try cacheFolder().appendingPathComponent("Model.mlpackage")
+        try FileManager.default.createDirectory(at: package, withIntermediateDirectories: true)
+        try Data("weights 1".utf8).write(to: package.appendingPathComponent("weights"))
+        let before = try CompiledModelCache.key(package)
+        XCTAssertEqual(try CompiledModelCache.key(package), before, "the same contents, the same key")
+        try Data("weights 2".utf8).write(to: package.appendingPathComponent("weights"))
+        XCTAssertNotEqual(try CompiledModelCache.key(package), before)
+    }
 }

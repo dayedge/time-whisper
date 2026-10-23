@@ -216,6 +216,16 @@ import TimeWhisper
 let parser = try TimeWhisper(model: modelFolder)          // the folder training/export.py wrote
 ```
 
+`CoreMLTagger` loads the model on its first request; `prepare()` loads it earlier, when the host expects text soon (a
+search field opening, say). The model is compiled from its package once per process. Give it `compiledModelCache:`, a
+folder of the host's own such as one in its Caches directory, and the compiled model is kept there across launches:
+compiled again only when the model's contents or the system's build change, with older copies removed.
+
+```swift
+let tagger = CoreMLTagger(folder: modelFolder, compiledModelCache: cachesFolder.appendingPathComponent("TimeWhisper"))
+let parser = try TimeWhisper(taggerFactory: { tagger })
+```
+
 Elsewhere, implement `Tagger` over any runtime, for example ONNX Runtime on the JVM, with the same tokenizer the model was trained with, and map the model's label names onto `TokenLabel` (`T` is `TITLE`, `W` is `WRAPPER`, the others by name).
 
 ## Lifetime

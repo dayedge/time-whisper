@@ -7,7 +7,7 @@ plugins {
     `maven-publish`
 }
 group = "org.github.dayedge"
-version = "0.7.0"
+version = "0.7.1"
 
 val generateFixtures = tasks.register("generateFixtures") {
     inputs.files("fixtures/en-date-expressions.txt")
